@@ -1,7 +1,18 @@
 import "./App.module.css";
+import contacts from "../../Data/contacts.json";
+import ContactForm from "../ContactForm/ContactForm";
+import SearchBox from "../SearchBox/SearchBox";
+import ContactList from "../ContactList/ContactList";
 
 function App() {
-  return <div>Hello HW03!</div>;
+  return (
+    <div>
+      <h1>Phonebook</h1>
+      <ContactForm />
+      <SearchBox />
+      <ContactList contacts={contacts} />
+    </div>
+  );
 }
 
 export default App;
