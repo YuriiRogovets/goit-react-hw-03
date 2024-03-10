@@ -2,20 +2,20 @@ import css from "./Contact.module.css";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 
-const Contact = ({ userName, phoneNumber, handleDelete }) => {
+const Contact = ({ name, number, id, handleDelete }) => {
   return (
     <div className={css.contactWrap}>
       <div className={css.contactData}>
         <p className={css.contactName}>
           <IoPersonSharp className={css.contactIcon} />
-          {userName}
+          {name}
         </p>
         <p className={css.contactPhone}>
           <FaPhoneAlt className={css.contactIcon} />
-          {phoneNumber}
+          {number}
         </p>
       </div>
-      <button className={css.contactBtn} onClick={handleDelete}>
+      <button className={css.contactBtn} onClick={() => handleDelete(id)}>
         Delete
       </button>
     </div>
